@@ -1,0 +1,64 @@
+HKCU
+{
+    Software
+    {
+        Classes
+        {
+            CLSID
+            {
+                ForceRemove {7DB52233-6FD2-4810-9DA5-3CD7604FAAA6} = s 'GitExplorer'
+                {
+                    InprocServer32 = s '%MODULE%'
+                    {
+                        val ThreadingModel = s 'Apartment'
+                    }
+                    DefaultIcon = s 'shell32.dll,-42'
+                    ShellFolder
+                    {
+                        val Attributes = d '&Ha0000020'
+                    }
+                }
+                ForceRemove {6ABD2266-AD0D-4801-AD51-8F0D6692E011} = s 'GitExplorerType'
+                {
+                    InprocServer32 = s '%MODULE%'
+                    {
+                        val ThreadingModel = s 'Apartment'
+                    }
+                    ShellEx
+                    {
+                        MayChangeDefaultMenu = s ''
+                    }
+                }
+            }
+            ForceRemove GitExplorerType
+            {
+                shellex
+                {
+                    ContextMenuHandlers
+                    {
+                        {6ABD2266-AD0D-4801-AD51-8F0D6692E011} = s '{6ABD2266-AD0D-4801-AD51-8F0D6692E011}'
+                    }
+                }
+            }
+        }
+        Microsoft
+        {
+            Windows
+            {
+                CurrentVersion
+                {
+                    Explorer
+                    {
+                        MyComputer
+                        {
+                            NameSpace
+                            {
+                                {7DB52233-6FD2-4810-9DA5-3CD7604FAAA6} = s 'GitExplorer'
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
