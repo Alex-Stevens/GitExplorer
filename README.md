@@ -14,5 +14,5 @@ Things added:
  - [HTTP client](https://github.com/microsoft/cpprestsdk) for making requests to the GitHub API.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Alex-Stevens/GitExplorer/master/docs/demo.gif" width="95%"/>
+  <img src="https://raw.githubusercontent.com/Alex-Stevens/GitExplorer/master/docs/demo.GIF" width="95%"/>
 </p>
