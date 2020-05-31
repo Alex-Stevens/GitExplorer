@@ -46,6 +46,7 @@
 #define IDS_SETTING3_TT                 143
 #define IDS_REQUEST                     144
 #define IDS_REQUEST_TT                  145
+#define IDD_PROPPAGE_MEDIUM             146
 
 // Next default values for new objects
 // 

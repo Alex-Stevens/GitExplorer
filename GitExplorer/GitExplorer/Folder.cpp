@@ -423,6 +423,9 @@ HRESULT CFolderViewImplFolder::GetAttributesOf(UINT cidl, PCUITEMID_CHILD_ARRAY 
             if (SUCCEEDED(hr))
             {
                 DWORD dwAttribs = 0;
+
+                dwAttribs |= SFGAO_HASPROPSHEET;
+
                 if (fIsFolder)
                 {
                     dwAttribs |= SFGAO_FOLDER;
