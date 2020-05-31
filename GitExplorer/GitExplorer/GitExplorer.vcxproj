@@ -100,7 +100,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ModuleDefinitionFile>GitExplorer.def</ModuleDefinitionFile>
-      <AdditionalDependencies>propsys.lib;shlwapi.lib;Pathcch.lib</AdditionalDependencies>
+      <AdditionalDependencies>propsys.lib;shlwapi.lib;Pathcch.lib;Comctl32.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -114,7 +114,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ModuleDefinitionFile>GitExplorer.def</ModuleDefinitionFile>
-      <AdditionalDependencies>propsys.lib;shlwapi.lib;Pathcch.lib</AdditionalDependencies>
+      <AdditionalDependencies>propsys.lib;shlwapi.lib;Pathcch.lib;Comctl32.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -132,7 +132,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ModuleDefinitionFile>GitExplorer.def</ModuleDefinitionFile>
-      <AdditionalDependencies>propsys.lib;shlwapi.lib;Pathcch.lib</AdditionalDependencies>
+      <AdditionalDependencies>propsys.lib;shlwapi.lib;Pathcch.lib;Comctl32.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -151,7 +151,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ModuleDefinitionFile>GitExplorer.def</ModuleDefinitionFile>
-      <AdditionalDependencies>propsys.lib;shlwapi.lib;Pathcch.lib</AdditionalDependencies>
+      <AdditionalDependencies>propsys.lib;shlwapi.lib;Pathcch.lib;Comctl32.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -168,6 +168,7 @@
     <ClCompile Include="GitExplorer.cpp" />
     <ClCompile Include="IdListEnumerator.cpp" />
     <ClCompile Include="PidlManager.cpp" />
+    <ClCompile Include="PropertySheet.cpp" />
     <ClCompile Include="Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -187,6 +188,7 @@
     <ClInclude Include="IdListEnumerator.h" />
     <ClInclude Include="PidlDef.h" />
     <ClInclude Include="PidlManager.h" />
+    <ClInclude Include="PropertySheet.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="ShellPidlDef.h" />
     <ClInclude Include="Utils.h" />

@@ -29,6 +29,16 @@ HKCU
                         MayChangeDefaultMenu = s ''
                     }
                 }
+                ForceRemove {6DDA2402-6148-46FF-A309-95AD893AF1E8} = s 'GitExplorer Property Page Class'
+                {
+                    ProgID = s 'GitExplorerType.PropPage.1'
+                    VersionIndependentProgID = s 'GitExplorerType.PropPage'
+                    ForceRemove 'Programmable'
+                    InprocServer32 = s '%MODULE%'
+                    {
+                        val ThreadingModel = s 'Apartment'
+                    }
+                }
             }
             ForceRemove GitExplorerType
             {
@@ -38,7 +48,20 @@ HKCU
                     {
                         {6ABD2266-AD0D-4801-AD51-8F0D6692E011} = s '{6ABD2266-AD0D-4801-AD51-8F0D6692E011}'
                     }
+                    PropertySheetHandlers
+                    {
+                        {6DDA2402-6148-46FF-A309-95AD893AF1E8} = s '{6DDA2402-6148-46FF-A309-95AD893AF1E8}'
+                    }
                 }
+            }
+            ForceRemove GitExplorerType.PropPage = s 'GitExplorer Property Page Class'
+            {
+                CLSID = s '{6DDA2402-6148-46FF-A309-95AD893AF1E8}'
+                CurVer = s 'GitExplorerType.PropPage.1'
+            }
+            ForceRemove GitExplorerType.PropPage.1 = s 'GitExplorer Property Page Class'
+            {
+                CLSID = s '{6DDA2402-6148-46FF-A309-95AD893AF1E8}'
             }
         }
         Microsoft
