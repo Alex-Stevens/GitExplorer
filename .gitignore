@@ -1,0 +1,15 @@
+*.db
+*.dll
+*.exp
+*.idb
+*.ilk
+*.ipch
+*.lib
+*.log
+*.obj
+*.opendb
+*.pdb
+*.res
+*.suo
+*.tlog
+*.user
