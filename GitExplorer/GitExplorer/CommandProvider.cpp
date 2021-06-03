@@ -62,12 +62,19 @@ HRESULT CFolderViewCommandProvider::s_OnRequest(IShellItemArray* psiItemArray, I
     // Build request URI and start the request.
     uri_builder builder(U("/zen"));
     pplx::task<http_response> requestTask = client.request(methods::GET, builder.to_string());
-    requestTask.wait();
-    auto response = requestTask.get();
-    auto text = response.extract_string().get();
-
-    MessageBox(NULL, text.c_str(), L"Result", MB_OK);
-
+    requestTask.then([](pplx::task<http_response> response)
+    {
+        try
+        {
+            auto result = response.get();
+            auto text = result.extract_string().get();
+            MessageBox(NULL, text.c_str(), L"Result", MB_OK);
+        }
+        catch (const std::exception& ex)
+        {
+            MessageBoxA(NULL, ex.what(), "Result", MB_OK);
+        }
+    });
     return S_OK;
 }
 
